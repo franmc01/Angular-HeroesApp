@@ -5,6 +5,7 @@ import { BuscarComponent } from './pages/buscar/buscar.component';
 import { VerHeroeComponent } from './pages/ver-heroe/ver-heroe.component';
 import { HomeHeroeComponent } from './pages/home-heroe/home-heroe.component';
 import { ListHeroeComponent } from './pages/list-heroe/list-heroe.component';
+import { HeoreRoutingModule } from './heore-routing.module';
 
 
 
@@ -17,7 +18,8 @@ import { ListHeroeComponent } from './pages/list-heroe/list-heroe.component';
     ListHeroeComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    HeoreRoutingModule
   ]
 })
 export class HeroeModule { }
