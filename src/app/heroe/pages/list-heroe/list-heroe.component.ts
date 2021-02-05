@@ -10,12 +10,12 @@ import { Heroe } from '../../models/heroe.model';
 })
 export class ListHeroeComponent implements OnInit {
 
-  listaHeores:Heroe[] = [];
+  listaHeroes:Heroe[] = [];
 
   constructor(private heroeService:HeroeService) { }
 
   ngOnInit(): void {
-    this.heroeService.getHeroes().subscribe(heroes=>{ this.listaHeores = heroes; })
+    this.heroeService.getHeroes().subscribe(heroes=>{ this.listaHeroes = heroes; })
   }
 
 }
