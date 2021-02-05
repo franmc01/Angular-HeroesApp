@@ -11,6 +11,7 @@ import { HeoreRoutingModule } from './heore-routing.module';
 import { MaterialDesignModule } from '../material-design/material-design.module';
 import { TarjetaHeroeComponent } from './components/tarjeta-heroe/tarjeta-heroe.component';
 import { ImagePipe } from './pipes/image.pipe';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -28,7 +29,8 @@ import { ImagePipe } from './pipes/image.pipe';
     CommonModule,
     HeoreRoutingModule,
     FlexLayoutModule,
-    MaterialDesignModule
+    MaterialDesignModule,
+    FormsModule
   ]
 })
 export class HeroeModule { }
