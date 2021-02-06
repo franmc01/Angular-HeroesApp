@@ -11,6 +11,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import {MatSelectModule} from '@angular/material/select';
 
 
 
@@ -22,6 +23,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
     MatGridListModule,
     MatSidenavModule,
     MatToolbarModule,
+    MatSelectModule,
     MatButtonModule,
     MatInputModule,
     MatIconModule,
