@@ -45,11 +45,11 @@
     </button>
     <span>Heores App</span>
     <span style="flex: 1 1 auto"></span>
-    <button mat-icon-button>
+    <span>{{ auth.usuario }}</span>
+    <button mat-icon-button (click)="logout()">
       <mat-icon>logout</mat-icon>
     </button>
   </mat-toolbar>
-
     <div class="container">
       <router-outlet></router-outlet>
     </div>
