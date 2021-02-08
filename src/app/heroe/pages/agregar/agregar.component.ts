@@ -64,10 +64,17 @@ export class AgregarComponent implements OnInit {
     }
   }
 
-  cambio(event:any){
+  detectarCambio(event:any){
     this.imagen= event.target.value;
     console.log(this.imagen);
     return (this.imagen.length > 0) ? this.heroe.alt_img = this.imagen : this.imagen = '';
+  }
+
+
+  borrarHeroe(){
+    this.heroeService.deleteHeroe(this.heroe.id!).subscribe(resp=>{
+      this.router.navigate(['/hero/listado-heroe'])
+    })
   }
 
 }

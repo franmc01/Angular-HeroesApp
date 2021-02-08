@@ -42,17 +42,20 @@
 
     <mat-form-field>
       <mat-label>Foto Url</mat-label>
-      <input matInput type="url" [(ngModel)]="heroe.alt_img" required (change)="cambio($event)">
+      <input matInput type="url" [(ngModel)]="heroe.alt_img" required (change)="detectarCambio($event)">
     </mat-form-field>
 
     <br>
 
     <div fxLayout>
 
-      <!-- <button mat-raised-button color="warn">
+      <button *ngIf="heroe.id"
+              mat-raised-button
+              color="warn"
+              (click)="borrarHeroe()">
         <mat-icon>remove</mat-icon>
         Borrar
-      </button> -->
+      </button>
 
       <span style="flex: 1 1 auto"></span>
 

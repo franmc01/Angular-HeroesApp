@@ -32,5 +32,9 @@ export class HeroeService {
     return this.http.put<Heroe>(`${this.baseUrl}/heroes/${id}`, heroe);
   }
 
+  deleteHeroe(id:string){
+    return this.http.delete(`${this.baseUrl}/heroes/${id}`);
+  }
+
 
 }
