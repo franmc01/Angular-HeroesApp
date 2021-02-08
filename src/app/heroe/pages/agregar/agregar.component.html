@@ -1,6 +1,7 @@
 <h1>
-  Agregar Heroe
-  <small>XYZ</small>
+  {{ (heroe.id)? 'Editar' : 'Nuevo'}}
+  Heroe:
+  <small>{{ heroe.superhero }}</small>
 </h1>
 
 <div fxLayout="row" fxLayoutGap="40px" fxLayout.xs="column">
@@ -49,10 +50,7 @@
 
     <div fxLayout>
 
-      <button *ngIf="heroe.id"
-              mat-raised-button
-              color="warn"
-              (click)="borrarHeroe()">
+      <button *ngIf="heroe.id" mat-raised-button color="warn" (click)="borrarHeroe()">
         <mat-icon>remove</mat-icon>
         Borrar
       </button>
@@ -61,14 +59,14 @@
 
       <button mat-raised-button color="primary" (click)="guardar()">
         <mat-icon>edit</mat-icon>
-        Agregar
+        {{ (heroe.id)? 'Actualizar' : 'Crear'}}
       </button>
 
     </div>
 
   </div>
-<div fxFlex=50 style="display: flex; align-items: center; justify-content: center;">
-   <img [src]="heroe.id | image:heroe.alt_img">
+  <div fxFlex=50 style="display: flex; align-items: center; justify-content: center;">
+    <img [src]="heroe.id | image:heroe.alt_img">
   </div>
 
 </div>
